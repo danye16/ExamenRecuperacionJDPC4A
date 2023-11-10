@@ -102,21 +102,19 @@ namespace ExamenRecuperacionJDPC4A
             Console.WriteLine();
             Console.WriteLine("Numeros ordenados");
             Console.Write(string.Join(",", numeros));
-
+            Console.WriteLine();
             int encontrar = 75;
-            int c = 0;
             bool centinela=false;
-            while (numeros[c]<numeros.Length)
-            { 
+            for (int c = 0; c <numeros.Length; c++) { 
+             
 
                 if (numeros[c]==encontrar)
                 {
-                    Console.WriteLine("El numero " +encontrar +" se encuentra en la posicion " + numeros[c]);
+                    Console.WriteLine("El numero " +encontrar +" se encuentra en la posicion " + c);
                     centinela = true;
                 }
-                c++;
-            }
-            if(!centinela)
+                }
+                if (!centinela)
             {
                 Console.WriteLine("El numero no se encuentra");
             }
